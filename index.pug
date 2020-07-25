@@ -1,0 +1,269 @@
+doctype
+html(class='lang')
+    head
+        meta(charset='UTF-8')
+        title template6
+        link(rel='stylesheet' href='css/font-awesome.min.css')
+        link(rel='stylesheet' href='css/normalize.css')
+        link(rel='stylesheet' href='css/bootstrap.css')
+        link(rel='stylesheet' href='css/master.css')
+    body
+
+        //start setting
+
+        section(class='setting-box text-center')
+            div(class='icon')
+                i(class='fa fa-gear')
+            div(class='setting-cont') 
+                h3(class='text-center') Colors
+                ul(class='list-unstyled text-center')
+                    li(class='active' data-color='#FF9800')
+                    li(data-color='dodgerblue')
+                    li(data-color='red')
+                    li(data-color='#ff2fcb')
+
+                div(class='option-box text-center')
+                    h3 Random Background
+                    div(class='random-back')
+                        button(class='btn btn-default active' data-option='true') Yes
+                        button(class='btn btn-defalt' data-option='false') No
+
+                div(class='option-box text-center')
+                    h3 Show Bullet
+                    div(class='option-bullet')
+                        button(class='btn btn-default active' data-option='true') Yes
+                        button(class='btn btn-defalt' data-option='false') No
+
+                div(class='option-box text-center')
+                    h3 Navbar Fixed?
+                    div(class='option-navbar')
+                        button(class='btn btn-default active' data-option='true') Yes
+                        button(class='btn btn-defalt' data-option='false') No
+
+            button(class='btn btn-danger reset-option') Reset Option
+
+        //end setting
+
+        //start nav bullet
+
+        section(class='nav-bullet')
+            div(class='bullet')
+                ul(class='list-unstyled')
+                    li(class='active' data-value='our-progress')
+                    li(data-value='gallery')
+                    li(data-value='feature')
+                    li(data-value='testimonial')
+
+            div(class='bullet-content')
+                ul(class='list-unstyled')
+                    li(id='our-progress') Skills
+                    li(id='gallery') Our Gallery
+                    li(id='feature') Our feature
+                    li(id='testimonial') Testimonial
+
+        //end nav bullet
+
+        //start landing page
+
+        section(class='landing')
+            .overlay
+                    nav(class='navbar navbar-inverse navbar-fixed-top' role='navigation')
+                            .container
+                                div(class='navbar-header')
+
+                                    button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ournavbar")
+                                        |
+                                        span(class='src-only')
+                                        |
+                                        |
+                                        span(class='icon-bar')
+                                        |
+                                        |
+                                        span(class='icon-bar')
+                                        |
+                                        |
+                                        span(class='icon-bar')
+                                    |
+                                    |
+                                    a(href="#" class="navbar-brand wobble-horizontal") #[span Special] Design 
+
+                                div(class="collapse navbar-collapse" id="ournavbar")
+                                    ul(class='nav navbar-nav navbar-right scroll')
+                                        li #[a(class='active' data-value='our-progress') Skills]
+                                        li #[a(data-value='feature') Our Feature]
+                                        li #[a(data-value='testimonial') Testimonial]
+                                        li #[a(data-value='contact-us') Contact]
+                    div(class='contnet text-center')
+                        h1 We Are #[span Creative] Agency
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste
+                
+        //end landing page
+
+        //start about us
+
+        section(class='about-us')
+            .container
+                .row
+                    .col-md-6
+                        h2 About Us
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum, tenetur dolores esse magni ratione distinctio! Quod iusto neque fuga, maxime quos nostrum quibusdam dicta deserunt blanditiis non voluptate id?
+                    .col-md-6
+                        img(src='imgs/about-us.jpg' class='img-responsive hidden-xs')
+                .clearfix
+              
+        //end about us
+
+        //start our-progress
+
+        - 
+            let skills=['HTML','CSS','JQUERY','JAVASCRIPT','SASS','PUG'],
+                skillsrate=['80','50','90','60','70','50'];
+
+        section(class='our-progress')
+            .container
+                h2(class='text-center') Skills
+                .row
+                    -for(var i=0;i<6;i++)
+                        .skills-content
+                            .col-md-6
+                                h3= skills[i]
+                            .col-md-6
+                                div(class='progress')
+                                    div(class='progress-bar progress-bar-primary active' role='progressbar' aria-valuenow=skillsrate[i] aria-valuemin='0' 
+                                        aria-valuemax='100')
+                                        span
+                .clearfix
+
+        //end our-progress
+
+        //start gallery
+
+        section(class='gallery text-center')
+            .container
+                h2 Our Gallery
+                .row
+                    - for(var i=1;i<=10;i++)
+                            div(class='col-md-3 col-xs-5 images')
+                                if( (i) == 6)
+                                    img(src=`imgs/${i}.png` class='img-thumbnail' alt='' width='200px' height='100px')
+                                else
+                                    img(src=`imgs/${i}.jpg`  class='img-thumbnail' alt=`image ${i}` width='200px' height='100px')
+                .clearfix
+
+        //end gallery
+
+        //start timeline
+
+        section(class='timeline hidden-xs')
+            .container
+                h2(class='text-center ') 2018
+                div(class='line-content')
+                .row
+                    div(class='contenttimeline')
+                        div(class='col-md-6')
+                            div(class='content left')
+                                h3 Testing Heading
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum, tenetur dolores esse magni ratione distinctio! Quod iusto neque fuga, maxime quos nostrum quibusdam dicta deserunt blanditiis non voluptate id?
+
+                        div(class='col-md-6')
+                            div(class='content right')
+                                h3 Testing Heading
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum, tenetur dolores esse magni ratione distinctio! Quod iusto neque fuga, maxime quos nostrum quibusdam dicta deserunt blanditiis non voluptate id?
+
+                .clearfix
+
+        //end timeline
+
+        //start feature
+
+        - 
+            let imagearray=[],
+                titlearray=['HTML','CSS','JQUERY','JAVASCRIPT','BOOTSTRAP','PUG'],
+                paragraph=['We are professional hTML & we will do anything you imagine in no time.',
+                            'We are professional CSS & we will do anything you imagine in no time.',
+                            'We are professional JQUERY & we will do anything you imagine in no time.',
+                            'We are professional JAVASCRIPT & we will do anything you imagine in no time.',
+                            'We are professional BOOSTSRAP & we will do anything you imagine in no time.',
+                            'We are professional PUG & we will do anything you imagine in no time.'];
+            for(var i=0;i<=6;i++)
+                imagearray[i] = `imgs/Icon_0${i+1}.png`;
+
+        section(class='feature text-center')
+            .container
+                h2 Our feature
+                .row
+                    -for(var i=0;i<6;i++)
+                        div(class='col-md-4 col-xs-6')
+                            div(class='thumbnail')
+                                img(src=`${imagearray[i]}` class='img-responsive' width='50px' height='50px')
+                                div(class='caption')
+                                    h3= titlearray[i]
+                                    span.line
+                                    p= paragraph[i]
+                .clearfix
+                                    
+        //end feature
+
+        //start testimonial
+
+        -
+            let mediaheading=['Abdo Tarek','Mohamed Tarek','Islam Youssef'],
+                mediapara=['CEO AT Company','CEO AT Company','CEO AT Company'],
+                mediaimage=['kevin','client','harv'],
+                testimonialparagraph=['Iam very happy with the product its amazing and i recieve it very fast and the price was amazing',
+                                    'Iam very happy with the product its amazing and i recieve it very fast and the price was amazing',
+                                    'Iam very happy with the product its amazing and i recieve it very fast and the price was amazing'];
+
+        section(class='testimonial')
+            .container
+                h2 Testimonial
+                .row
+                    -for(var i=0;i<3;i++)
+                        div(class='col-md-4 col-xs-12')
+                            .info
+                                p= testimonialparagraph[i] 
+                                div(class='media')
+                                    div(class='media-left')
+                                        img(src=`imgs/${mediaimage[i]}.png` class='media-object img-circle img-thumbnail' width='100px' height='100px')
+                                    div(class='media-body')
+                                        h4(class='media-heading')= mediaheading[i]
+                                        p= mediapara[i]
+
+                .clearfix
+    
+        //end testimonial
+
+        //start contact us
+
+        section(class='contact-us')
+            .overlay
+                .container
+                    h2(class='text-center') Contact Us
+                    form
+                        .row
+                            .col-md-6
+                                input(type='text' class='form-control'  placeholder='Your Name')
+                                input(type='text' class='form-control'  placeholder='Your Phone')
+                                input(type='email' class='form-control' placeholder='Your Email')
+                                input(type='text' class='form-control'  placeholder='Subject')
+
+                            .col-md-6
+                                textarea(class='form-control' placeholder='Your Message')
+                                input(type='submit' value='Send')
+
+                        .clearfix
+
+        //end contact us
+
+        //Start footer
+
+        section(class='footer text-center')
+            .container
+                p  ALL Copyright Reserved 2020
+
+        //end footer
+
+        script(src='js/jquery-3.2.1.min.js')
+        script(src='js/jquery.nicescroll.min.js')
+        script(src='js/bootstrap.min.js')
+        script(src='js/master.js')
