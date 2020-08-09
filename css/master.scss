@@ -250,12 +250,9 @@ body{
             }
             p{
                 font-size:15px;
-            }
-        
+            }   
         }
-
     }
-
 }
 
 /*end landing page*/
@@ -265,7 +262,7 @@ body{
 .about-us{
     padding:50px 0;
 
-    @media (max-width:767px) {
+    @media(max-width:767px) {
         
         &{
             padding:20px 0;
@@ -274,22 +271,22 @@ body{
 
         h2{
             margin:20px 0 !important;
+            text-align:center;
         }
 
         p{
             width:70%;
             margin:auto;
+            font-size:20px;
         }
-
     }
 
-    img{
-        @media (max-width:767px) {
-            
-            &{
-                display:none;
-            }
-        }   
+
+    @media(max-width:767px) { 
+        img{
+            display:none;
+        }
+        
     }
 
     h2{

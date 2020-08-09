@@ -174,10 +174,12 @@ body {
       padding: 20px 0;
       text-align: center; }
     .about-us h2 {
-      margin: 20px 0 !important; }
+      margin: 20px 0 !important;
+      text-align: center; }
     .about-us p {
       width: 70%;
-      margin: auto; } }
+      margin: auto;
+      font-size: 20px; } }
   @media (max-width: 767px) {
     .about-us img {
       display: none; } }
