@@ -59,19 +59,21 @@ body{
         width: 30px;
         height:30px;
         cursor:pointer;
+
+
+        @media(max-width:767px) {
+
+            &{
+                width: 40px;
+                height:40px;
+
+                i{
+                    font-size:35px;
+                }
+            }
+        }
     }
 
-    @media(max-width:767px) {
-
-        .icon{
-            width: 40px;
-            height:40px;
-        }
-
-        i{
-            font-size:35px;
-        }
-    }
 
     .setting-cont{
         h3{
