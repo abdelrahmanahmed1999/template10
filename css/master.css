@@ -133,29 +133,37 @@ body {
   position: relative; }
   @media (max-width: 767px) {
     .landing {
-      height: 700px !important; } }
+      height: 300px !important; } }
   .landing .overlay {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6); }
-  .landing span {
+  .landing a span {
     color: var(--main-color); }
-  .landing ul li a {
+  @media (max-width: 767px) {
+    .landing a {
+      font-size: 15px; } }
+  .landing .nav li a {
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     cursor: pointer; }
-    .landing ul li a:hover {
-      color: red; }
-  .landing ul li a.active {
-    color: var(--main-color); }
+    .landing .nav li a:hover {
+      color: var(--main-color); }
+    .landing .nav li a.active {
+      color: var(--main-color); }
+    @media (max-width: 767px) {
+      .landing .nav li a {
+        font-size: 15px; } }
   .landing .contnet {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+    .landing .contnet h1 span {
+      color: var(--main-color); }
     .landing .contnet p {
       font-size: 20px;
       margin: 20px 0; }
