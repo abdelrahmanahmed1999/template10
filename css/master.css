@@ -1,16 +1,14 @@
 body {
   height: 300px; }
 
-/*root bysma7lk ank ta3ml variable gwa mlf .css w tst5dmoh e3ny anta law ro7t 3la master.css hatl2eh la2onoh bysma ank t3ml root*/
 :root {
   --main-color: #FF9800; }
 
-/* $priamrycolor:#FF9800;*/
 .heading2, .setting-box .setting-cont h3, .about-us h2, .our-progress h2, .gallery h2, .feature h2, .testimonial h2, .contact-us h2 {
   margin-bottom: 50px;
   color: var(--main-color); }
 
-.paragraph, .about-us p, .timeline .contenttimeline .content p, .feature .thumbnail .caption p, .testimonial p {
+.paragraph, .about-us p, .feature .thumbnail .caption p, .testimonial p {
   line-height: 1.8;
   font-size: 15px;
   color: darkgrey; }
@@ -32,12 +30,19 @@ body {
   transition: all .5s ease-in-out; }
   .setting-box .icon {
     position: absolute;
-    right: -25px;
+    right: -40px;
     top: 100px;
     font-size: 25px;
     background: #FFF;
-    width: 25px;
+    width: 30px;
+    height: 30px;
     cursor: pointer; }
+  @media (max-width: 767px) {
+    .setting-box .icon {
+      width: 40px;
+      height: 40px; }
+    .setting-box i {
+      font-size: 35px; } }
   .setting-box .setting-cont h3 {
     margin: 50px 0 20px; }
   .setting-box .setting-cont ul li {
@@ -126,6 +131,9 @@ body {
   background-size: cover;
   color: #FFF;
   position: relative; }
+  @media (max-width: 767px) {
+    .landing {
+      height: 700px !important; } }
   .landing .overlay {
     width: 100%;
     height: 100%;
@@ -151,6 +159,11 @@ body {
     .landing .contnet p {
       font-size: 20px;
       margin: 20px 0; }
+    @media (max-width: 767px) {
+      .landing .contnet h1 {
+        font-size: 33px; }
+      .landing .contnet p {
+        font-size: 15px; } }
 
 /*end landing page*/
 /*start about us*/
@@ -165,6 +178,9 @@ body {
     .about-us p {
       width: 70%;
       margin: auto; } }
+  @media (max-width: 767px) {
+    .about-us img {
+      display: none; } }
   .about-us h2 {
     margin: 60px 0 50px; }
 
@@ -236,8 +252,7 @@ body {
   background: #FFF;
   border: 1px solid #CCC;
   padding: 20px;
-  z-index: 1033;
-  /*imageheading,closepopdiv*/ }
+  z-index: 1033; }
   .pop-div img {
     max-width: 100%; }
   .pop-div .imageheading {
@@ -257,40 +272,6 @@ body {
     cursor: pointer; }
 
 /*end gallery*/
-/*start timeline*/
-.timeline {
-  padding: 30px 0;
-  position: relative; }
-  .timeline h2 {
-    background: var(--main-color);
-    color: #fff;
-    width: 100px;
-    margin: auto; }
-  .timeline .contenttimeline {
-    position: relative; }
-    .timeline .contenttimeline .content {
-      padding-left: 40px; }
-      .timeline .contenttimeline .content h3 {
-        color: var(--main-color); }
-  .timeline .contenttimeline:before {
-    position: absolute;
-    content: '';
-    left: 50%;
-    top: 0;
-    width: 10px;
-    height: 100%;
-    background: #333; }
-  .timeline .line-content {
-    content: "";
-    top: 0;
-    left: 50%;
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    z-index: 1;
-    background: var(--main-color); }
-
-/*end timeline*/
 /*start feature*/
 .feature {
   padding: 50px 0; }
